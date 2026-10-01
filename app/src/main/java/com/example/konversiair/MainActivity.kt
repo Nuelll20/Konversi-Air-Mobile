@@ -1,7 +1,6 @@
 package com.example.konversiair
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioGroup
@@ -9,9 +8,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.text.DecimalFormat
+
 class MainActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -50,7 +50,19 @@ class MainActivity : AppCompatActivity() {
             }else if(pilihanDari == R.id.rbDariMassa && pilihanKe == R.id.rbKeVolume) {
                 //Volume = massa dibagi massa jenis air
                 hasil = nilai /1.0
+                satuanHasil = "mL"
+            }else{
+                Toast.makeText(
+                    this, "Pilih jenis konversi yang berbeda",
+                    Toast.LENGTH_SHORT
+                ).show()
+                return@setOnClickListener
             }
+
+            val formatAngka = DecimalFormat("0.##")
+            val hasilTampil = formatAngka.format(hasil)
+
+            tvHasil.text = "Hasil: $hasilTampil $satuanHasil"
         }
     }
 }
