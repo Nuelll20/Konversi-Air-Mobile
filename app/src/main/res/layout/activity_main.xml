@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="#EAF6FF">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Konversi Air"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#1565C0"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="25dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dari:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+    <RadioGroup
+        android:id="@+id/rgDari"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <RadioButton
+            android:id="@+id/rbDariVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volume (mililiter"
+            android:checked="true" />
+        <RadioButton
+            android:id="@+id/rbDariMassa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Massa (gram)" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etNilai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Masukkan nilai"
+        android:inputType="numberDecimal"
+        android:padding="12dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ke:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="000000"
+        android:layout_marginTop="25dp" />
+
+    <RadioGroup
+        android:id="@+id/rgKe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/rbKeVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volume (mililiter)" />
+        <RadioButton
+            android:id="@+id/rbKeMassa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Massa(gram)"
+            android:checked="true" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnHitung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HITUNG"
+        android:textSize="16sp"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:id="@+id/tvHasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hasil konversi akan tampil disini"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#1565C0"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginTop="15dp" />
+</LinearLayout>
+
